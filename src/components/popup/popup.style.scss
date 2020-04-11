@@ -1,0 +1,67 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #445565;
+  overflow-y: scroll;
+
+  .content {
+    display: block;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 25px;
+    color: white;
+
+    h2 {
+      font-weight: 600;
+      font-size: 28px;
+
+      span {
+        font-weight: 300;
+        font-size: 20px;
+      }
+    }
+
+    .plot {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0px -15px 30px;
+
+      img {
+        flex: 1 1 50%;
+        max-width: 300px;
+        padding: 0px 15px;
+      }
+
+      p {
+        flex: 1 1 50%;
+        padding: 15px;
+      }
+
+      .close {
+        display: inline-block;
+        padding: 15px 30px;
+        font-size: 18px;
+        font-weight: 700;
+        width: 100px;
+        height: 50px;
+
+        background: #4484c4;
+        color: white;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        appearance: none;
+        cursor: pointer;
+        transition: 0.4s ease-out;
+
+        &:hover {
+          background: #223343;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.result {
+  width: 33.33333333%;
+  min-width: 250px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  h3 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 10px;
+    background: #445565;
+    flex: 1 1 100%;
+    transition: 0.4s ease-out;
+  }
+
+  &:hover {
+    h3 {
+      background: #fff;
+      color: #223343;
+    }
+  }
+}
