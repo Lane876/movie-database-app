@@ -11,11 +11,11 @@ const App = () => {
     selected: {},
   });
 
-  const apiUrl = "http://www.omdbapi.com/?apikey=50457d94";
+  const apiUrl = "https://www.omdbapi.com/?apikey=50457d94";
   const search = (event) => {
     if (event.key === "Enter") {
       axios(apiUrl + "&s=" + state.s).then(({ data }) => {
-        const results = data.Search;
+        let results = data.Search;
 
         setState((prevState) => {
           return { ...prevState, results: results };
