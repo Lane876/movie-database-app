@@ -12,10 +12,10 @@ const Popup = ({ selected, closePopup }) => {
         <div className="plot">
           <img src={selected.Poster} alt={selected.Title} />
           <p>{selected.Plot}</p>
-          <button className="close" onClick={closePopup}>
-            Close
-          </button>
         </div>
+        <button className="close" onClick={closePopup}>
+          &#10006;
+        </button>
       </div>
     </section>
   );

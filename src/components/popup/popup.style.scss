@@ -2,22 +2,23 @@
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-color: #445565;
-  overflow-y: scroll;
+  overflow-y: hidden;
 
   .content {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    max-width: 960px;
     margin: 0 auto;
-    padding: 25px;
     color: white;
 
     h2 {
       font-weight: 600;
       font-size: 28px;
+      padding: 20px;
 
       span {
         font-weight: 300;
@@ -27,40 +28,55 @@
 
     .plot {
       display: flex;
-      flex-wrap: wrap;
-      margin: 0px -15px 30px;
+      justify-content: space-around;
+      max-width: 960px;
+      max-height: 400px;
+      padding: 20px;
+
+      @media screen and (max-width: 600px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+      }
 
       img {
-        flex: 1 1 50%;
         max-width: 300px;
-        padding: 0px 15px;
-      }
+        padding: 20px;
 
-      p {
-        flex: 1 1 50%;
-        padding: 15px;
-      }
-
-      .close {
-        display: inline-block;
-        padding: 15px 30px;
-        font-size: 18px;
-        font-weight: 700;
-        width: 100px;
-        height: 50px;
-
-        background: #4484c4;
-        color: white;
-        border-radius: 8px;
-        border: none;
-        outline: none;
-        appearance: none;
-        cursor: pointer;
-        transition: 0.4s ease-out;
-
-        &:hover {
-          background: #223343;
+        @media screen and (max-width: 600px) {
+          width: 50%;
         }
+      }
+      p {
+        // flex: 1 1 70%;
+        min-width: 300px;
+        padding: 20px;
+
+        @media screen and (max-width: 600px) {
+          width: 300px;
+        }
+      }
+    }
+    .close {
+      // display: inline-block;
+      // padding: 15px;
+      font-size: 30px;
+      font-weight: 700;
+      min-width: 200px;
+      height: 50px;
+
+      background: #4484c4;
+      color: white;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      appearance: none;
+      cursor: pointer;
+      transition: 0.4s ease-out;
+
+      &:hover {
+        background: #223343;
       }
     }
   }
